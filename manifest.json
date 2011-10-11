@@ -1,7 +1,7 @@
 {
     "name": "Basecamp Shortcut",
     "description": "This app simply gives you quick access to your Basecamp account.",
-    "version": "1.0",
+    "version": "1.1.1",
     "app": {
         "launch": {
             "local_path": "main.html"

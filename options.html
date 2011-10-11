@@ -11,7 +11,7 @@
                 background: white;
                 border-radius: 10px;
                 -webkit-box-shadow: 0 3px 10px grey;
-                font: 20px  / 36px Arial, Helvetica, sans-serif;
+                font: 20px    / 36px Arial, Helvetica, sans-serif;
                 margin: 20px auto;
                 padding: 20px;
             }
@@ -25,17 +25,17 @@
             label {
                 display: block;
                 text-align: center;
-                font-size: 36px;
+                font-size: 28px;
                 color: grey;
                 width: 840px;
-                margin: 0 auto;
+                margin: 40px auto;
             }
             input {
                 width: auto;
                 color: black;
                 border: 0;
                 border-bottom: 1px dotted grey;
-                font-size: 36px;
+                font-size: 28px;
                 text-align: right;
             }
             input:focus {
@@ -43,7 +43,7 @@
                 border-bottom-color: black;
             }
             button {
-                font-size: 36px;
+                font-size: 28px;
                 display: block;
                 width: 770px;
                 cursor: pointer;
@@ -61,11 +61,12 @@
 
             // Update status to let user know options were saved.
             var status = document.getElementById("status");
-            status.innerHTML = "URL Saved.";
+            status.innerHTML = "URL Saved. Redirecting...";
             setTimeout(function() {
                 status.innerHTML = "";
-            }, 750);
-            restore_options();
+                window.location = "main.html";
+            }, 1000);
+            //restore_options();
         }
 
         // Restores text box state to saved value from localStorage.
@@ -90,7 +91,7 @@
             <input type="text" id="url" name="url" />
             .basecamphq.com</label>
         <button onclick="save_options()">
-            Save
+            Save and go to your Basecamp
         </button>
         <div id="status"></div>
     </body>

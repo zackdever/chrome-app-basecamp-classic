@@ -1,19 +1,19 @@
 <html>
-<head>
-	<title>Basecamp Shortcut Redirecting...</title>
-	<link rel="shortcut icon" href="/icon_16.png">
-</head>
-<script type="text/javascript">
-	function get_options() {
-	  var saved = localStorage["saved_url"];
-	  if (saved == undefined || saved == null || saved == '') {
-		window.location = "/options.html";
-	  } else {
-	  window.location = "https://" + saved + ".basecamphq.com";
-	  }
-	}
-</script>
-<body onload="get_options()">
-Redirecting...
-</body>
+    <head>
+        <title>Basecamp Shortcut Redirecting...</title>
+        <link rel="shortcut icon" href="/icon_16.png">
+    </head>
+    <script type="text/javascript">
+        function get_options() {
+            var saved = localStorage["saved_url"];
+            if(saved == undefined || saved == null || saved == '') {
+                window.location = "options.html";
+            } else {
+                window.location = "https://" + saved + ".basecamphq.com";
+            }
+        }
+    </script>
+    <body onload="get_options()">
+        Redirecting...
+    </body>
 </html>
